@@ -1,0 +1,469 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff917382e41, pid=928, tid=0x000000000000622c
+#
+# JRE version: OpenJDK Runtime Environment (8.0_152-b26) (build 1.8.0_152-release-1343-b26)
+# Java VM: OpenJDK 64-Bit Server VM (25.152-b26 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [awt.dll+0x92e41]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000019949000):  JavaThread "AWT-Windows" daemon [_thread_in_native, id=25132, stack(0x0000000018e20000,0x0000000018f20000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x0512ce56ffff000c, RBX=0x0000000000000000, RCX=0x0512ce56ffff000c, RDX=0x00007ff9173ddba0
+RSP=0x0000000018f1ee90, RBP=0x0000000018f1ef49, RSI=0x000000000000010f, RDI=0x00000000199491e0
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x00007ff9173fc1c8, R11=0x0000000000000001
+R12=0x0000000017030410, R13=0x0000000000000111, R14=0x000000000000a220, R15=0x0000000000000000
+RIP=0x00007ff917382e41, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x0000000018f1ee90)
+0x0000000018f1ee90:   0000000000000000 0000000000000000
+0x0000000018f1eea0:   000000000000c31a 0000000000000000
+0x0000000018f1eeb0:   0000000017030498 00007ff917385253
+0x0000000018f1eec0:   0000000017030498 0000000000000111
+0x0000000018f1eed0:   0000000000000012 0000000000000000
+0x0000000018f1eee0:   0000000000000002 0000000000000012
+0x0000000018f1eef0:   000000000000c31a 0000000051cdd5d0
+0x0000000018f1ef00:   0000000000000000 0000000051df1632
+0x0000000018f1ef10:   0000000000000001 0000000000000000
+0x0000000018f1ef20:   0000001200000003 00000000199491e0
+0x0000000018f1ef30:   fffffffffffffffe 0000000017030498
+0x0000000018f1ef40:   0000000000000048 0000000000000001
+0x0000000018f1ef50:   0000f77ab8b45dbf 0000000000000000
+0x0000000018f1ef60:   0000000000000070 0000000000000000
+0x0000000018f1ef70:   0000000000000000 0000000000000111
+0x0000000018f1ef80:   000000000000a220 000000000000a220 
+
+Instructions: (pc=0x00007ff917382e41)
+0x00007ff917382e21:   4d 85 c0 75 23 48 8d 0d c3 03 0c 00 e8 4e 95 03
+0x00007ff917382e31:   00 48 8b c8 48 85 c0 75 07 b8 02 00 00 00 eb 29
+0x00007ff917382e41:   48 8b 00 ff 50 10 eb f1 49 8b c8 e8 8b e5 ff ff
+0x00007ff917382e51:   48 85 c0 74 0f 4c 8b 00 8b d3 48 8b c8 41 ff 90 
+
+
+Register to memory mapping:
+
+RAX=0x0512ce56ffff000c is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x0512ce56ffff000c is an unknown value
+RDX=0x00007ff9173ddba0 is an unknown value
+RSP=0x0000000018f1ee90 is pointing into the stack for thread: 0x0000000019949000
+RBP=0x0000000018f1ef49 is pointing into the stack for thread: 0x0000000019949000
+RSI=0x000000000000010f is an unknown value
+RDI=0x00000000199491e0 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x00007ff9173fc1c8 is an unknown value
+R11=0x0000000000000001 is an unknown value
+R12=0x0000000017030410 is an unknown value
+R13=0x0000000000000111 is an unknown value
+R14=0x000000000000a220 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x0000000018e20000,0x0000000018f20000],  sp=0x0000000018f1ee90,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [awt.dll+0x92e41]
+C  [awt.dll+0x95253]
+C  [awt.dll+0xd67e5]
+C  [awt.dll+0xa941f]
+C  [awt.dll+0x914ae]
+C  [USER32.dll+0x16d41]
+C  [USER32.dll+0x1690b]
+C  [awt.dll+0x150d8]
+C  [COMCTL32.dll+0x1b2e2]
+C  [COMCTL32.dll+0x1b1a5]
+C  [USER32.dll+0x16d41]
+C  [USER32.dll+0x16713]
+C  [awt.dll+0xce58c]
+C  [awt.dll+0xce82b]
+C  0x00000000028389a7
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.windows.WToolkit.eventLoop()V+0
+j  sun.awt.windows.WToolkit.run()V+58
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000030ad4000 JavaThread "ApplicationImpl pooled thread 823" daemon [_thread_blocked, id=21532, stack(0x0000000064a20000,0x0000000064b20000)]
+  0x0000000030add000 JavaThread "Swing-Shell" daemon [_thread_blocked, id=20548, stack(0x000000006f520000,0x000000006f620000)]
+  0x0000000019988000 JavaThread "TimerQueue" daemon [_thread_blocked, id=23396, stack(0x000000001f2c0000,0x000000001f3c0000)]
+  0x0000000019983800 JavaThread "Netty Builtin Server 2" [_thread_in_native, id=19932, stack(0x000000001eec0000,0x000000001efc0000)]
+  0x0000000019986800 JavaThread "Batik CleanerThread" daemon [_thread_blocked, id=19780, stack(0x000000001ecc0000,0x000000001edc0000)]
+  0x0000000019981000 JavaThread "MarlinRenderer Disposer" daemon [_thread_blocked, id=19336, stack(0x000000001ebc0000,0x000000001ecc0000)]
+  0x0000000019982800 JavaThread "FeatureUsageFileEventLogger" daemon [_thread_blocked, id=22796, stack(0x000000001ddc0000,0x000000001dec0000)]
+  0x0000000016f2d000 JavaThread "BaseDataReader: error stream of fsnotifier64.exe" [_thread_in_native, id=21512, stack(0x000000001d8c0000,0x000000001d9c0000)]
+  0x0000000016f29800 JavaThread "BaseDataReader: output stream of fsnotifier64.exe" [_thread_in_native, id=18128, stack(0x000000001d7c0000,0x000000001d8c0000)]
+  0x0000000016f2e000 JavaThread "fsnotifier64.exe" [_thread_in_native, id=20440, stack(0x000000001d6c0000,0x000000001d7c0000)]
+  0x000000001bfa1000 JavaThread "AWT-EventQueue-0 2018.3.4#PS-183.5429.47 PhpStorm, eap:false, os:Windows 10 10.0, java-version:JetBrains s.r.o 1.8.0_152-release-1343-b26" [_thread_in_native, id=25232, stack(0x000000001c9c0000,0x000000001cac0000)]
+  0x000000001bfa0000 JavaThread "AWT-Shutdown" [_thread_blocked, id=19608, stack(0x000000001c8c0000,0x000000001c9c0000)]
+  0x0000000019b34000 JavaThread "Periodic tasks thread" daemon [_thread_blocked, id=25236, stack(0x000000001b2f0000,0x000000001b3f0000)]
+  0x0000000017122800 JavaThread "Netty Builtin Server 1" [_thread_in_native, id=10892, stack(0x0000000019210000,0x0000000019310000)]
+=>0x0000000019949000 JavaThread "AWT-Windows" daemon [_thread_in_native, id=25132, stack(0x0000000018e20000,0x0000000018f20000)]
+  0x0000000019950000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=8728, stack(0x0000000018c20000,0x0000000018d20000)]
+  0x0000000016fc5800 JavaThread "Service Thread" daemon [_thread_blocked, id=13872, stack(0x0000000017b20000,0x0000000017c20000)]
+  0x0000000016f2c800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=25000, stack(0x0000000017a20000,0x0000000017b20000)]
+  0x0000000016f1f000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=19276, stack(0x0000000017920000,0x0000000017a20000)]
+  0x0000000016f17800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=15384, stack(0x0000000017820000,0x0000000017920000)]
+  0x0000000016f15000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=23812, stack(0x0000000017720000,0x0000000017820000)]
+  0x0000000016ebb000 JavaThread "Attach Listener" daemon [_thread_blocked, id=25428, stack(0x0000000017620000,0x0000000017720000)]
+  0x0000000016ea2800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8648, stack(0x0000000017520000,0x0000000017620000)]
+  0x0000000016ea1800 JavaThread "Surrogate Locker Thread (Concurrent GC)" daemon [_thread_blocked, id=23968, stack(0x0000000017420000,0x0000000017520000)]
+  0x000000001643e000 JavaThread "Finalizer" daemon [_thread_blocked, id=4772, stack(0x0000000017320000,0x0000000017420000)]
+  0x000000001643d000 JavaThread "Reference Handler" daemon [_thread_blocked, id=18264, stack(0x0000000017220000,0x0000000017320000)]
+  0x0000000002313000 JavaThread "main" [_thread_in_native, id=22780, stack(0x0000000000050000,0x0000000000150000)]
+
+Other Threads:
+  0x0000000016434000 VMThread [stack: 0x0000000016c40000,0x0000000016d40000] [id=25180]
+  0x0000000016fc8000 WatcherThread [stack: 0x0000000017c20000,0x0000000017d20000] [id=24404]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ par new generation   total 39296K, used 17456K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,  47% used [0x00000000d1200000, 0x00000000d220fa18, 0x00000000d3420000)
+  from space 4352K,  23% used [0x00000000d3420000, 0x00000000d351c5e8, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 272576K, used 181373K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251924K, capacity 269383K, committed 269484K, reserved 1284096K
+  class space    used 30908K, capacity 34254K, committed 34320K, reserved 1048576K
+
+Card table byte_map: [0x00000000123e0000,0x0000000012560000] byte_map_base: 0x0000000011d57000
+
+Marking Bits: (CMSBitMap*) 0x000000000239d468
+ Bits: [0x0000000012ee0000, 0x00000000136b0000)
+
+Mod Union Table: (CMSBitMap*) 0x000000000239d528
+ Bits: [0x0000000002130000, 0x000000000214f400)
+
+Polling page: 0x0000000000490000
+
+CodeCache: size=245760Kb used=183618Kb max_used=188095Kb free=62141Kb
+ bounds [0x0000000002820000, 0x000000000e260000, 0x0000000011820000]
+ total_blobs=42962 nmethods=41720 adapters=1145
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 76511.424 Thread 0x0000000016f2c800 73724       3       java.text.SimpleDateFormat::format (171 bytes)
+Event: 76511.427 Thread 0x0000000016f2c800 nmethod 73724 0x000000000916f410 code [0x000000000916f640, 0x0000000009170738]
+Event: 76541.424 Thread 0x0000000016f2c800 73725       3       java.text.SimpleDateFormat::format (21 bytes)
+Event: 76541.426 Thread 0x0000000016f2c800 nmethod 73725 0x0000000002f3a650 code [0x0000000002f3a7c0, 0x0000000002f3aa38]
+Event: 77201.448 Thread 0x0000000016f2c800 73726       3       java.text.DateFormat::format (56 bytes)
+Event: 77201.450 Thread 0x0000000016f2c800 nmethod 73726 0x0000000002dc3ad0 code [0x0000000002dc3ca0, 0x0000000002dc4658]
+Event: 77549.527 Thread 0x0000000016f2c800 73727       3       java.awt.Container::updateGraphicsData (59 bytes)
+Event: 77549.528 Thread 0x0000000016f2c800 nmethod 73727 0x0000000002ebdad0 code [0x0000000002ebdcc0, 0x0000000002ebe648]
+Event: 77549.532 Thread 0x0000000016f2c800 73728       1       sun.awt.NullComponentPeer::updateGraphicsData (2 bytes)
+Event: 77549.533 Thread 0x0000000016f2c800 nmethod 73728 0x000000000299f4d0 code [0x000000000299f620, 0x000000000299f730]
+
+GC Heap History (10 events):
+Event: 45064.024 GC heap before
+{Heap before GC invocations=5265 (full 19):
+ par new generation   total 39296K, used 37134K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  50% used [0x00000000d3860000, 0x00000000d3a83af0, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 272576K, used 181073K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251821K, capacity 269315K, committed 269484K, reserved 1284096K
+  class space    used 30899K, capacity 34242K, committed 34320K, reserved 1048576K
+Event: 45064.030 GC heap after
+Heap after GC invocations=5266 (full 19):
+ par new generation   total 39296K, used 1787K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  41% used [0x00000000d3420000, 0x00000000d35dec40, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 272576K, used 181081K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251821K, capacity 269315K, committed 269484K, reserved 1284096K
+  class space    used 30899K, capacity 34242K, committed 34320K, reserved 1048576K
+}
+Event: 51818.254 GC heap before
+{Heap before GC invocations=5266 (full 19):
+ par new generation   total 39296K, used 36731K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  41% used [0x00000000d3420000, 0x00000000d35dec40, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 272576K, used 181081K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251837K, capacity 269327K, committed 269484K, reserved 1284096K
+  class space    used 30900K, capacity 34244K, committed 34320K, reserved 1048576K
+Event: 51818.265 GC heap after
+Heap after GC invocations=5267 (full 19):
+ par new generation   total 39296K, used 2493K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  57% used [0x00000000d3860000, 0x00000000d3acf640, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 272576K, used 181087K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251837K, capacity 269327K, committed 269484K, reserved 1284096K
+  class space    used 30900K, capacity 34244K, committed 34320K, reserved 1048576K
+}
+Event: 60258.039 GC heap before
+{Heap before GC invocations=5267 (full 19):
+ par new generation   total 39296K, used 37437K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  57% used [0x00000000d3860000, 0x00000000d3acf640, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 272576K, used 181087K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251853K, capacity 269327K, committed 269484K, reserved 1284096K
+  class space    used 30900K, capacity 34244K, committed 34320K, reserved 1048576K
+Event: 60258.046 GC heap after
+Heap after GC invocations=5268 (full 19):
+ par new generation   total 39296K, used 1339K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  30% used [0x00000000d3420000, 0x00000000d356ede8, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 272576K, used 181139K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251853K, capacity 269327K, committed 269484K, reserved 1284096K
+  class space    used 30900K, capacity 34244K, committed 34320K, reserved 1048576K
+}
+Event: 67164.408 GC heap before
+{Heap before GC invocations=5268 (full 19):
+ par new generation   total 39296K, used 36283K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  30% used [0x00000000d3420000, 0x00000000d356ede8, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 272576K, used 181139K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251879K, capacity 269351K, committed 269484K, reserved 1284096K
+  class space    used 30903K, capacity 34248K, committed 34320K, reserved 1048576K
+Event: 67164.416 GC heap after
+Heap after GC invocations=5269 (full 19):
+ par new generation   total 39296K, used 1394K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  32% used [0x00000000d3860000, 0x00000000d39bcb18, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 272576K, used 181350K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251879K, capacity 269351K, committed 269484K, reserved 1284096K
+  class space    used 30903K, capacity 34248K, committed 34320K, reserved 1048576K
+}
+Event: 75318.951 GC heap before
+{Heap before GC invocations=5269 (full 19):
+ par new generation   total 39296K, used 36338K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K, 100% used [0x00000000d1200000, 0x00000000d3420000, 0x00000000d3420000)
+  from space 4352K,  32% used [0x00000000d3860000, 0x00000000d39bcb18, 0x00000000d3ca0000)
+  to   space 4352K,   0% used [0x00000000d3420000, 0x00000000d3420000, 0x00000000d3860000)
+ concurrent mark-sweep generation total 272576K, used 181350K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251892K, capacity 269351K, committed 269484K, reserved 1284096K
+  class space    used 30903K, capacity 34248K, committed 34320K, reserved 1048576K
+Event: 75318.960 GC heap after
+Heap after GC invocations=5270 (full 19):
+ par new generation   total 39296K, used 1009K [0x00000000d1200000, 0x00000000d3ca0000, 0x00000000e0c00000)
+  eden space 34944K,   0% used [0x00000000d1200000, 0x00000000d1200000, 0x00000000d3420000)
+  from space 4352K,  23% used [0x00000000d3420000, 0x00000000d351c5e8, 0x00000000d3860000)
+  to   space 4352K,   0% used [0x00000000d3860000, 0x00000000d3860000, 0x00000000d3ca0000)
+ concurrent mark-sweep generation total 272576K, used 181373K [0x00000000e0c00000, 0x00000000f1630000, 0x0000000100000000)
+ Metaspace       used 251892K, capacity 269351K, committed 269484K, reserved 1284096K
+  class space    used 30903K, capacity 34248K, committed 34320K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 43955.509 Thread 0x00000000232d4000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x000000000d401f88 method=com.intellij.codeInsight.lookup.LookupElementBuilder.createWithSmartPointer(Ljava/lang/String;Lcom/intellij/psi/PsiElement;)Lcom/intellij/codeInsight/lookup/LookupElementB
+Event: 45063.927 Thread 0x000000001998f000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000035922d0 method=sun.reflect.Reflection.filter([Ljava/lang/reflect/Member;[Ljava/lang/String;)[Ljava/lang/reflect/Member; @ 1
+Event: 45063.945 Thread 0x0000000019982800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000cec2764 method=java.util.concurrent.LinkedBlockingQueue.take()Ljava/lang/Object; @ 49
+Event: 45064.008 Thread 0x000000001998f000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000a62a7a4 method=kotlin.collections.CollectionsKt___CollectionsKt.toMutableSet(Ljava/lang/Iterable;)Ljava/util/Set; @ 12
+Event: 45064.017 Thread 0x000000001998f000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000005c4ae80 method=com.intellij.openapi.roots.impl.DirectoryInfo.hasLibraryClassRoot()Z @ 4
+Event: 45064.017 Thread 0x000000001998f000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000079cc670 method=com.intellij.openapi.roots.impl.DirectoryInfo.hasLibraryClassRoot()Z @ 4
+Event: 60143.397 Thread 0x0000000016f29800 Uncommon trap: reason=unreached action=reinterpret pc=0x0000000002ae2710 method=com.intellij.util.io.BaseOutputReader.readAvailableBlocking()Z @ 19
+Event: 77549.525 Thread 0x000000001bfa1000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002cc9d58 method=sun.awt.Win32GraphicsDevice.getDefaultConfiguration()Ljava/awt/GraphicsConfiguration; @ 4
+Event: 77549.525 Thread 0x000000001bfa1000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000006904a88 method=java.awt.Component.updateGraphicsData(Ljava/awt/GraphicsConfiguration;)Z @ 103
+Event: 77549.525 Thread 0x000000001bfa1000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000067b9318 method=sun.awt.Win32GraphicsDevice.getDynamicColorModel()Ljava/awt/image/ColorModel; @ 4
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 44278.966 Thread 0x000000001bfa1000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000d158ebd0) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 45316.285 Thread 0x0000000030ad7800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d145f8b8) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 45316.299 Thread 0x0000000030ad7800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d1513b10) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 45316.303 Thread 0x0000000030ad7800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d158d6d8) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 63074.392 Thread 0x0000000030ada000 Exception <a 'java/io/FileNotFoundException'> (0x00000000d1d5a650) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 63074.428 Thread 0x0000000030ada000 Exception <a 'java/io/FileNotFoundException'> (0x00000000d1e48340) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 63074.437 Thread 0x0000000030ada000 Exception <a 'java/io/FileNotFoundException'> (0x00000000d1ebf478) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 75567.797 Thread 0x0000000030ad7800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d134e9f8) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 75567.818 Thread 0x0000000030ad7800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d13f2918) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 75567.828 Thread 0x0000000030ad7800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d146acf0) thrown at [C:\BuildAgent\work\9f979a2e38bdaf6\hotspot\src\share\vm\prims\jni.cpp, line 709]
+
+Events (10 events):
+Event: 77549.521 loading class java/util/WeakHashMap$EntryIterator done
+Event: 77549.525 Thread 0x000000001bfa1000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x0000000002cc9d58
+Event: 77549.525 Thread 0x000000001bfa1000 DEOPT PACKING pc=0x0000000002cc9d58 sp=0x000000001cabe080
+Event: 77549.525 Thread 0x000000001bfa1000 DEOPT UNPACKING pc=0x000000000286557b sp=0x000000001cabe018 mode 2
+Event: 77549.525 Thread 0x000000001bfa1000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x0000000006904a88
+Event: 77549.525 Thread 0x000000001bfa1000 DEOPT PACKING pc=0x0000000006904a88 sp=0x000000001cabdf90
+Event: 77549.525 Thread 0x000000001bfa1000 DEOPT UNPACKING pc=0x000000000286557b sp=0x000000001cabded8 mode 2
+Event: 77549.525 Thread 0x000000001bfa1000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x00000000067b9318
+Event: 77549.525 Thread 0x000000001bfa1000 DEOPT PACKING pc=0x00000000067b9318 sp=0x000000001cabdbc0
+Event: 77549.525 Thread 0x000000001bfa1000 DEOPT UNPACKING pc=0x000000000286557b sp=0x000000001cabdb60 mode 2
+
+
+Dynamic libraries:
+0x0000000140000000 - 0x0000000140147000 	D:\install2\PhpStorm 2018.3.4\bin\phpstorm64.exe
+0x00007ff94b570000 - 0x00007ff94b751000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff949b70000 - 0x00007ff949c21000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff947ff0000 - 0x00007ff948263000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff948f20000 - 0x00007ff9490b0000 	C:\Windows\System32\USER32.dll
+0x00007ff947ed0000 - 0x00007ff947ef0000 	C:\Windows\System32\win32u.dll
+0x00007ff949870000 - 0x00007ff949898000 	C:\Windows\System32\GDI32.dll
+0x00007ff947c30000 - 0x00007ff947dc2000 	C:\Windows\System32\gdi32full.dll
+0x00007ff947b90000 - 0x00007ff947c2f000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff947ef0000 - 0x00007ff947fe8000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff9499e0000 - 0x00007ff949a81000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff949940000 - 0x00007ff9499de000 	C:\Windows\System32\msvcrt.dll
+0x00007ff949b10000 - 0x00007ff949b6b000 	C:\Windows\System32\sechost.dll
+0x00007ff949450000 - 0x00007ff949574000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff949c30000 - 0x00007ff94b070000 	C:\Windows\System32\SHELL32.dll
+0x00007ff947dd0000 - 0x00007ff947e19000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ff948d00000 - 0x00007ff948da9000 	C:\Windows\System32\shcore.dll
+0x00007ff949110000 - 0x00007ff949432000 	C:\Windows\System32\combase.dll
+0x00007ff948270000 - 0x00007ff9482ea000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff9482f0000 - 0x00007ff9489fd000 	C:\Windows\System32\windows.storage.dll
+0x00007ff9498a0000 - 0x00007ff9498f1000 	C:\Windows\System32\shlwapi.dll
+0x00007ff9478e0000 - 0x00007ff9478f1000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ff947900000 - 0x00007ff94791f000 	C:\Windows\System32\profapi.dll
+0x00007ff947880000 - 0x00007ff9478cc000 	C:\Windows\System32\powrprof.dll
+0x00007ff9478d0000 - 0x00007ff9478da000 	C:\Windows\System32\FLTLIB.DLL
+0x00007ff949900000 - 0x00007ff94992d000 	C:\Windows\System32\IMM32.DLL
+0x0000000051af0000 - 0x0000000052331000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\server\jvm.dll
+0x00007ff949440000 - 0x00007ff949448000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff944720000 - 0x00007ff944743000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff93f450000 - 0x00007ff93f45a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff934140000 - 0x00007ff934149000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff9446f0000 - 0x00007ff94471a000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x0000000058040000 - 0x0000000058112000 	C:\Windows\SYSTEM32\MSVCR100.dll
+0x00007ff94b080000 - 0x00007ff94b0ec000 	C:\Windows\System32\WS2_32.dll
+0x00007ff941c50000 - 0x00007ff941c5f000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\verify.dll
+0x00007ff9397d0000 - 0x00007ff9397f9000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\java.dll
+0x00007ff939ef0000 - 0x00007ff939f06000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\zip.dll
+0x00007ff9397a0000 - 0x00007ff9397c4000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\sunec.dll
+0x00007ff9172f0000 - 0x00007ff917488000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\awt.dll
+0x00007ff949580000 - 0x00007ff949642000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ff944f50000 - 0x00007ff945517000 	C:\Windows\SYSTEM32\d2d1.dll
+0x00007ff945c00000 - 0x00007ff945c8b000 	C:\Windows\SYSTEM32\apphelp.dll
+0x00007ff941290000 - 0x00007ff941337000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.17134.706_none_f94e2d3f30997a52\COMCTL32.dll
+0x00007ff945dc0000 - 0x00007ff945e58000 	C:\Windows\system32\uxtheme.dll
+0x00007ff9496f0000 - 0x00007ff949863000 	C:\Windows\System32\MSCTF.dll
+0x00007ff946010000 - 0x00007ff946039000 	C:\Windows\system32\dwmapi.dll
+0x00007ff948a00000 - 0x00007ff948b51000 	C:\Windows\System32\ole32.dll
+0x00007ff939780000 - 0x00007ff93979a000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\net.dll
+0x00007ff9470f0000 - 0x00007ff947156000 	C:\Windows\system32\mswsock.dll
+0x00007ff939640000 - 0x00007ff939651000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\nio.dll
+0x00007ff9472b0000 - 0x00007ff9472c7000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00007ff946c80000 - 0x00007ff946cb3000 	C:\Windows\system32\rsaenh.dll
+0x00007ff9473e0000 - 0x00007ff947405000 	C:\Windows\SYSTEM32\bcrypt.dll
+0x00007ff947780000 - 0x00007ff9477a8000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ff9472d0000 - 0x00007ff9472db000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x00007ff946e20000 - 0x00007ff946e58000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ff94b070000 - 0x00007ff94b078000 	C:\Windows\System32\NSI.dll
+0x00007ff942570000 - 0x00007ff942586000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007ff942220000 - 0x00007ff94223a000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x00007ff941c40000 - 0x00007ff941c4d000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\management.dll
+0x00007ff938cc0000 - 0x00007ff938d02000 	C:\Users\Ã·¹ö¹ö\.PhpStorm2018.3\system\tmp\jna49976785337523510.dll
+0x00007ff939500000 - 0x00007ff93951b000 	D:\install2\PhpStorm 2018.3.4\bin\IdeaWin64.dll
+0x00007ff91a7d0000 - 0x00007ff91a862000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\freetype.dll
+0x00007ff917640000 - 0x00007ff9176e4000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\fontmanager.dll
+0x00007ff9362b0000 - 0x00007ff9363d0000 	C:\Windows\system32\opengl32.dll
+0x00007ff936280000 - 0x00007ff9362ac000 	C:\Windows\SYSTEM32\GLU32.dll
+0x00007ff938c80000 - 0x00007ff938cba000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\splashscreen.dll
+0x00007ff940e60000 - 0x00007ff940e67000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\jawt.dll
+0x00007ff9387c0000 - 0x00007ff9387fe000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\lcms.dll
+0x00007ff949650000 - 0x00007ff9496f0000 	C:\Windows\System32\clbcatq.dll
+0x00007ff93aa10000 - 0x00007ff93ac79000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.706_none_fb43a2cb30647007\comctl32.dll
+0x00007ff943500000 - 0x00007ff9436ae000 	C:\Windows\SYSTEM32\WindowsCodecs.dll
+0x00007ff92d740000 - 0x00007ff92d798000 	C:\Windows\system32\dataexchange.dll
+0x00007ff944c40000 - 0x00007ff944f4b000 	C:\Windows\system32\d3d11.dll
+0x00007ff945520000 - 0x00007ff9456bc000 	C:\Windows\system32\dcomp.dll
+0x00007ff946640000 - 0x00007ff9466fb000 	C:\Windows\system32\dxgi.dll
+0x00007ff946150000 - 0x00007ff946308000 	C:\Windows\system32\twinapi.appcore.dll
+0x00007ff946040000 - 0x00007ff946069000 	C:\Windows\system32\RMCLIENT.dll
+0x00007ff939900000 - 0x00007ff93990b000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\sunmscapi.dll
+0x00007ff947940000 - 0x00007ff947b22000 	C:\Windows\System32\CRYPT32.dll
+0x00007ff947920000 - 0x00007ff947932000 	C:\Windows\System32\MSASN1.dll
+0x00007ff9308e0000 - 0x00007ff9308f6000 	C:\Windows\system32\napinsp.dll
+0x00007ff930190000 - 0x00007ff9301aa000 	C:\Windows\system32\pnrpnsp.dll
+0x00007ff944390000 - 0x00007ff9443a9000 	C:\Windows\system32\NLAapi.dll
+0x00007ff946ec0000 - 0x00007ff946f7e000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x00007ff9321e0000 - 0x00007ff9321ee000 	C:\Windows\System32\winrnr.dll
+0x00007ff941da0000 - 0x00007ff941e12000 	C:\Windows\System32\fwpuclnt.dll
+0x00007ff940aa0000 - 0x00007ff940aaa000 	C:\Windows\System32\rasadhlp.dll
+0x00007ff940550000 - 0x00007ff9405e6000 	C:\Windows\System32\TextInputFramework.dll
+0x00007ff945a00000 - 0x00007ff945ada000 	C:\Windows\System32\CoreMessaging.dll
+0x00007ff942b00000 - 0x00007ff942e1e000 	C:\Windows\System32\CoreUIComponents.dll
+0x00007ff946970000 - 0x00007ff9469a1000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x00007ff942880000 - 0x00007ff9429cd000 	C:\Windows\SYSTEM32\wintypes.dll
+0x00007ff929dd0000 - 0x00007ff92a265000 	C:\Windows\system32\explorerframe.dll
+0x00007ff93f6a0000 - 0x00007ff93fd3b000 	C:\Windows\System32\OneCoreUAPCommonProxyStub.dll
+0x00007ff92d7a0000 - 0x00007ff92d80b000 	C:\Windows\SYSTEM32\OLEACC.dll
+0x00007ff936f70000 - 0x00007ff93710b000 	C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.17134.706_none_2c2e95b08af6e9d5\gdiplus.dll
+0x00007ff943c20000 - 0x00007ff943dd4000 	C:\Windows\SYSTEM32\PROPSYS.dll
+0x00007ff929d20000 - 0x00007ff929d64000 	C:\Windows\SYSTEM32\edputil.dll
+0x00007ff8fcf30000 - 0x00007ff8fd021000 	C:\Windows\system32\msctfuimanager.dll
+0x00007ff939f30000 - 0x00007ff93a0db000 	C:\Windows\system32\DUI70.dll
+0x00007ff93e6d0000 - 0x00007ff93e763000 	C:\Windows\system32\DUser.dll
+0x00007ff92e0a0000 - 0x00007ff92e2a0000 	C:\Windows\SYSTEM32\UIAutomationCore.dll
+0x00007ff9476e0000 - 0x00007ff94777a000 	C:\Windows\SYSTEM32\sxs.dll
+0x00007ff9425e0000 - 0x00007ff942629000 	C:\Windows\System32\UIAnimation.dll
+0x00007ff93b490000 - 0x00007ff93b7ac000 	C:\Windows\system32\dwrite.dll
+0x00007ff91db10000 - 0x00007ff91e28e000 	C:\Windows\SYSTEM32\D3D10Warp.dll
+0x00007ff944180000 - 0x00007ff94421a000 	C:\Windows\system32\directmanipulation.dll
+0x00007ff942ec0000 - 0x00007ff942ef9000 	C:\Windows\system32\xmllite.dll
+0x00007ff92ddc0000 - 0x00007ff92ddc9000 	C:\Windows\system32\IconCodecService.dll
+0x00007ff9437c0000 - 0x00007ff94383f000 	C:\Windows\SYSTEM32\policymanager.dll
+0x00007ff9443b0000 - 0x00007ff944441000 	C:\Windows\SYSTEM32\msvcp110_win.dll
+0x00007ff93a450000 - 0x00007ff93a4bf000 	C:\Windows\SYSTEM32\PhotoMetadataHandler.dll
+0x00007ff938d30000 - 0x00007ff938d5a000 	D:\install2\PhpStorm 2018.3.4\jre64\bin\jpeg.dll
+0x00007ff92d3f0000 - 0x00007ff92d463000 	C:\Windows\System32\OneCoreCommonProxyStub.dll
+0x00007ff93a320000 - 0x00007ff93a447000 	C:\Windows\system32\NetworkExplorer.dll
+0x00007ff933870000 - 0x00007ff93388a000 	C:\Windows\SYSTEM32\MPR.dll
+0x00007ff912160000 - 0x00007ff91216b000 	C:\Windows\System32\drprov.dll
+0x00007ff946e60000 - 0x00007ff946eb6000 	C:\Windows\System32\WINSTA.dll
+0x00007ff912140000 - 0x00007ff912156000 	C:\Windows\System32\ntlanman.dll
+0x00007ff912120000 - 0x00007ff91213d000 	C:\Windows\System32\davclnt.dll
+0x00007ff912110000 - 0x00007ff91211c000 	C:\Windows\System32\DAVHLPR.dll
+0x00007ff943780000 - 0x00007ff943797000 	C:\Windows\System32\wkscli.dll
+0x00007ff92fb40000 - 0x00007ff92fb52000 	C:\Windows\SYSTEM32\cscapi.dll
+0x00007ff946f80000 - 0x00007ff946f8e000 	C:\Windows\System32\netutils.dll
+0x00007ff912990000 - 0x00007ff9129da000 	C:\Windows\System32\dlnashext.dll
+0x00007ff942250000 - 0x00007ff94226e000 	C:\Windows\System32\DevDispItemProvider.dll
+0x00007ff947690000 - 0x00007ff9476b7000 	C:\Windows\System32\DEVOBJ.dll
+
+VM Arguments:
+jvm_args: -Xms128m -Xmx750m -XX:ReservedCodeCacheSize=240m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -Djdk.http.auth.tunneling.disabledSchemes="" -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -Djb.vmOptionsFile=D:\install2\PhpStorm 2018.3.4\bin\phpstorm64.exe.vmoptions -Didea.platform.prefix=PhpStorm -Didea.jre.check=true -Dide.native.launcher=true -Didea.paths.selector=PhpStorm2018.3 -XX:ErrorFile=C:\Users\…ÚÚ\java_error_in_phpstorm_%p.log -XX:HeapDumpPath=C:\Users\…ÚÚ\java_error_in_phpstorm.hprof 
+java_command: <unknown>
+java_class_path (initial): D:\install2\PhpStorm 2018.3.4\lib\bootstrap.jar;D:\install2\PhpStorm 2018.3.4\lib\extensions.jar;D:\install2\PhpStorm 2018.3.4\lib\util.jar;D:\install2\PhpStorm 2018.3.4\lib\jdom.jar;D:\install2\PhpStorm 2018.3.4\lib\log4j.jar;D:\install2\PhpStorm 2018.3.4\lib\trove4j.jar;D:\install2\PhpStorm 2018.3.4\lib\jna.jar;D:\install2\PhpStorm 2018.3.4\jre64\lib\tools.jar
+Launcher Type: generic
+
+Environment Variables:
+PATH=D:\install2\anacdot;D:\install2\CTEX\Ghostscript\gs9.05\bin;D:\install2\CTEX\GSview\gsview;D:\install2\CTEX\WinEdt;D:\install2\texlive\texlive\2018\bin\win32;D:\install2\Microsoft VS Code\bin;C:\Program Files\SumatraPDF;D:\install2\mingw\mingw\mingwsetup\bin;F:\MYNRTREYE_SDK\3rdparty\opencv\build\x64\vc15\bin;C:\Program Files\Microsoft\Web Platform Installer\;D:\install2\wamp64\bin\php\php7.2.14;D:\install2\wamp64\bin\apache\apache2.4.37\bin;C:\Windows\System32;D:\install2\anacdot\Scripts;D:\install2\wamp64\bin\mysql\mysql5.7.24\bin;D:\install2\ComposerSetup\ComposerSetup;C:\Users\Ã·¹ö¹ö\AppData\Local\Microsoft\WindowsApps;;D:\install2\WebStorm 2018.3.5\bin;;D:\install2\PhpStorm 2018.3.4\bin;;D:\install2\Microsoft VS Code\bin;C:\Users\ÃƒÂ·Â¹Ã¶Â¹Ã¶\AppData\Roaming\npm;D:\install2\texlive\texlive\2018\bin;C:\Users\Ã·¹ö¹ö\AppData\Roaming\Composer\vendor\bin
+USERNAME=Ã·¹ö¹ö
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.706)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8248996k(1250116k free), swap 19754572k(3234132k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.152-b26) for windows-amd64 JRE (1.8.0_152-release-1343-b26), built on Nov 29 2018 17:33:07 by "builduser" with MS VC++ 10.0 (VS2010)
+
+time: Mon Apr 22 10:28:05 2019
+elapsed time: 77549 seconds (0d 21h 32m 29s)
+
